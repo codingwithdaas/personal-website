@@ -28,7 +28,8 @@ My long-term goal is to contribute to advancements in AI and bioinformatics that
 This site is built using:
 
 - HTML / CSS / JavaScript   
-- Git & GitHub for version control  
+- Git & GitHub for version control
+- Love :D  
 
 ---
 
