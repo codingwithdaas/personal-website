@@ -544,9 +544,12 @@ button {
   }
 
   .hero-photo-wrap {
-    width: 140px;
-    height: 140px;
-    margin-bottom: 8px;
+    width: 100%;
+    height: auto;
+    margin-bottom: -60px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -55px;
   }
 
   .hero-actions {
