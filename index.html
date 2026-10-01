@@ -1,272 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Keerat, For Your Information</title>
-<meta name="description" content="Keerat Singh — high school student interested in computer engineering, bioinformatics, AI/ML, and renewable energy.">
-
-<!-- Fonts: Space Grotesk (display), Inter (body), IBM Plex Mono (labels) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="styles.css">
+<meta name="description" content="Keerat Singh — student developer exploring computer science, AI/ML, bioinformatics and renewable energy.">
+<meta name="theme-color" content="#24346e">
+<meta property="og:title" content="Keerat Singh">
+<meta property="og:description" content="I like exploring things, breaking things, and figuring out how things work.">
+<meta property="og:image" content="/assets/img/sunset-field.webp">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23ffd497'/><stop offset='1' stop-color='%23f2898f'/></linearGradient></defs><circle cx='16' cy='16' r='11' fill='url(%23g)'/></svg>">
+<link rel="preload" href="assets/fonts/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div>
+<canvas class="stars" aria-hidden="true"></canvas>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="#top" class="logo">
-    </a>
-
-    <nav class="nav" id="primary-nav">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#journey" class="nav-link">Journey</a>
-    </nav>
-
-    <a href="#contact" class="btn btn-primary header-cta">Say Hello</a>
-
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<header class="nav" id="nav">
+  <a class="brand" href="#top">keerat<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#play">Tabla</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#sunsets">Sunsets</a></li>
+    <li><a href="#thoughts">Thoughts</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu"><span></span><span></span><span class="sr-only">Menu</span></button>
+  <button class="sound-btn" id="soundBtn" aria-pressed="false" type="button">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="label">Tanpura</span><span class="sr-only"> ambient sound</span>
+  </button>
 </header>
+<nav class="menu" id="menu" hidden aria-label="Sections">
+  <a href="#about">About</a><a href="#play">Tabla</a><a href="#journey">Journey</a><a href="#sunsets">Sunsets</a><a href="#thoughts">Thoughts</a><a href="#contact">Contact</a>
+</nav>
+<dialog class="lightbox" id="lightbox" aria-label="Sunset photo">
+  <img id="lbImg" alt="">
+  <button type="button" class="lb-btn lb-prev" aria-label="Previous photo">←</button>
+  <button type="button" class="lb-btn lb-next" aria-label="Next photo">→</button>
+  <button type="button" class="lb-btn lb-close" aria-label="Close">✕</button>
+</dialog>
+<div class="borrow" aria-hidden="true"></div>
 
-<main id="top">
-
-  <!-- ================= HERO ================= -->
-    <section class="hero container">
-
-    <div class="hero-photo-wrap">
-      <img src="images/keerat.png" alt="Keerat Singh" class="hero-photo">
+<main id="main">
+  <section class="hero" id="top">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="moon" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="status"><span class="dot" aria-hidden="true"></span><span>currently: <b>hella busy bruh</b></span></div>
+      <h1>Keerat <em>Singh</em></h1>
+      <p class="lede">I'm someone who likes exploring things, breaking things, and figuring out how things work.</p>
+      <p class="roles">Student developer · computer science · AI/ML · bioinformatics · renewable energy</p>
     </div>
-
-    <div class="hero-content">
-    
-    <p class="status-pill">
-      <span class="status-dot" aria-hidden="true"></span>
-      STATUS · hella busy bruh
-    </p>
-
-    <h1 class="hero-name">Keerat Singh</h1>
-
-    <p class="hero-tagline">
-      Student&nbsp;· Computer&nbsp;Engineering&nbsp;· AI/ML&nbsp;· Bioinformatics&nbsp;· Renewable&nbsp;Energies
-    </p>
-
-    <p class="hero-intro">
-     I'm someone who likes exploring things, breaking things, and figuring out how things work. 
-  My interests bounce between software, hardware, artificial intelligence, bioinformatics, and renewable energy.
-  This website is a place to document my little corner of the internet — a place to share what I'm building, learning, and becoming.
-    </p>
-
-    <div class="hero-actions">
-      <a href="https://github.com/codingwithdaas" class="btn btn-primary" target="_blank" rel="noopener">View GitHub</a>
-      <a href="#contact" class="btn btn-secondary">Say Hello</a>
+    <div class="wrap">
+      <div class="dial">
+        <div class="dial-label">the sky<strong id="skyName">golden hour</strong></div>
+        <input id="skyDial" type="range" min="0" max="100" value="0" aria-label="Move the sky from golden hour to night" aria-describedby="skyTime">
+        <button class="dial-reset" id="skyReset" type="button" hidden>match my time</button>
+        <span class="sr-only" id="skyTime"></span>
+      </div>
     </div>
+    <svg class="horizon" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+  <path class="h-far" d="M0,260 L0,148.0 L12,145.0 L24,142.9 L36,141.9 L48,141.2 L60,139.9 L72,137.2 L84,133.5 L96,129.7 L108,126.7 L120,124.3 L132,121.5 L144,117.4 L156,111.5 L168,104.5 L180,97.5 L192,91.3 L204,86.1 L216,81.2 L228,75.8 L240,70.1 L252,64.9 L264,61.6 L276,60.9 L288,60.1 L300,58.3 L312,56.8 L324,55.6 L336,55.5 L348,57.4 L360,61.6 L372,67.3 L384,73.3 L396,78.6 L408,83.2 L420,87.8 L432,93.2 L444,99.6 L456,106.2 L468,111.9 L480,112.3 L492,107.6 L504,103.3 L516,100.3 L528,98.8 L540,97.9 L552,96.7 L564,94.7 L576,92.3 L588,90.6 L600,90.1 L612,90.8 L624,91.5 L636,91.3 L648,89.9 L660,88.0 L672,86.7 L684,86.7 L696,87.7 L708,88.9 L720,89.3 L732,89.1 L744,89.1 L756,90.3 L768,93.2 L780,97.3 L792,101.4 L804,104.6 L816,107.0 L828,109.3 L840,112.4 L852,116.5 L864,120.8 L876,124.2 L888,126.0 L900,122.9 L912,118.7 L924,115.5 L936,113.5 L948,112.0 L960,110.1 L972,107.6 L984,104.9 L996,103.3 L1008,103.4 L1020,105.1 L1032,107.5 L1044,109.5 L1056,110.7 L1068,111.5 L1080,113.1 L1092,115.8 L1104,119.2 L1116,122.4 L1128,124.4 L1140,125.1 L1152,125.3 L1164,126.1 L1176,126.4 L1188,125.2 L1200,123.9 L1212,121.6 L1224,118.6 L1236,115.8 L1248,114.2 L1260,114.0 L1272,114.5 L1284,114.6 L1296,113.5 L1308,111.4 L1320,109.4 L1332,108.1 L1344,107.7 L1356,107.5 L1368,106.5 L1380,104.2 L1392,101.2 L1404,98.7 L1416,97.5 L1428,97.6 L1440,98.3 L1440,260 Z"/>
+  <path class="h-near" d="M0,260 L0,169.3 L12,166.3 L24,164.2 L36,163.1 L48,162.7 L60,162.4 L72,161.7 L84,160.9 L96,160.6 L108,161.5 L120,163.3 L132,165.5 L144,167.3 L156,168.5 L168,169.2 L180,170.1 L192,171.7 L204,173.9 L216,176.1 L228,176.6 L240,175.7 L252,174.6 L264,174.0 L276,174.5 L288,175.8 L300,177.1 L312,178.1 L324,178.5 L336,178.9 L348,179.9 L360,181.7 L372,184.0 L384,185.7 L396,183.6 L408,180.6 L420,177.2 L432,174.3 L444,171.9 L456,169.8 L468,167.3 L480,164.2 L492,160.7 L504,157.6 L516,155.5 L528,154.7 L540,154.4 L552,154.1 L564,153.5 L576,152.8 L588,152.7 L600,153.6 L612,155.3 L624,157.3 L636,158.7 L648,159.5 L660,159.9 L672,160.8 L684,161.9 L696,161.9 L708,161.9 L720,161.3 L732,160.3 L744,159.3 L756,159.1 L768,160.0 L780,161.7 L792,163.3 L804,164.4 L816,165.0 L828,165.7 L840,166.9 L852,168.8 L864,170.9 L876,172.5 L888,173.2 L900,173.1 L912,172.5 L924,171.5 L936,171.3 L948,171.5 L960,171.4 L972,170.8 L984,169.9 L996,169.7 L1008,170.4 L1020,172.1 L1032,174.1 L1044,175.7 L1056,176.6 L1068,177.1 L1080,178.0 L1092,179.5 L1104,181.5 L1116,183.2 L1128,184.1 L1140,184.1 L1152,183.7 L1164,183.8 L1176,184.7 L1188,186.2 L1200,187.5 L1212,186.4 L1224,183.4 L1236,180.4 L1248,178.2 L1260,177.0 L1272,176.3 L1284,175.4 L1296,173.9 L1308,171.9 L1320,170.1 L1332,169.1 L1344,169.0 L1356,169.3 L1368,169.2 L1380,168.7 L1392,167.9 L1404,167.7 L1416,168.5 L1428,170.5 L1440,172.9 L1440,260 Z"/>
+  <path class="h-trees" d="M0,260 L0,236 L0.0,236.0 Q0.0,206.3 18.4,204.9 Q36.7,206.3 36.7,236.0 L29.4,236.0 Q29.4,212.3 44.5,211.1 Q59.7,212.3 59.7,236.0 L53.6,236.0 Q53.6,205.8 67.1,204.3 Q80.6,205.8 80.6,236.0 L75.2,238.7 L83.6,186.8 L92.1,238.7 L89.5,236.2 L95.5,203.1 L101.5,236.2 L98.2,237.2 L107.7,192.0 L117.2,237.2 L110.1,234.6 L115.2,194.9 L120.3,234.6 L117.2,234.1 L126.4,175.7 L135.5,234.1 L129.8,234.2 L138.1,173.1 L146.5,234.2 L143.4,235.1 L148.5,181.1 L153.6,235.1 L149.6,235.7 L155.8,193.7 L161.9,235.7 L158.2,236.0 Q158.2,216.5 173.4,215.5 Q188.5,216.5 188.5,236.0 L182.5,235.2 L188.0,189.4 L193.5,235.2 L191.7,233.4 L200.2,172.1 L208.8,233.4 L201.2,237.5 L208.1,190.0 L215.1,237.5 L210.5,236.0 Q210.5,204.6 222.5,203.1 Q234.6,204.6 234.6,236.0 L229.8,238.8 L239.1,209.7 L248.5,238.8 L245.1,236.0 Q245.1,215.2 263.4,214.1 Q281.8,215.2 281.8,236.0 L274.5,236.0 Q274.5,216.7 291.3,215.7 Q308.2,216.7 308.2,236.0 L301.4,236.0 Q301.4,210.4 318.9,209.2 Q336.4,210.4 336.4,236.0 L329.4,235.7 L335.0,188.0 L340.6,235.7 L336.1,235.8 L344.7,183.5 L353.3,235.8 L347.9,235.7 L354.1,201.0 L360.2,235.7 L355.1,236.0 Q355.1,208.2 374.9,206.8 Q394.7,208.2 394.7,236.0 L386.8,233.6 L393.6,190.9 L400.4,233.6 L398.9,236.0 Q398.9,206.7 416.5,205.3 Q434.0,206.7 434.0,236.0 L427.0,237.5 L433.1,191.6 L439.3,237.5 L436.5,237.5 L444.6,178.6 L452.7,237.5 L450.6,236.0 Q450.6,213.3 465.1,212.1 Q479.5,213.3 479.5,236.0 L473.8,238.6 L483.6,198.1 L493.5,238.6 L490.5,237.7 L498.6,177.2 L506.8,237.7 L501.1,236.0 Q501.1,212.1 515.3,210.9 Q529.4,212.1 529.4,236.0 L523.8,236.0 Q523.8,213.0 545.1,211.9 Q566.4,213.0 566.4,236.0 L557.9,237.1 L566.0,180.5 L574.0,237.1 L572.1,236.0 Q572.1,208.3 593.1,206.9 Q614.1,208.3 614.1,236.0 L605.7,236.2 L612.8,191.5 L620.0,236.2 L617.7,234.6 L623.1,181.7 L628.4,234.6 L625.2,234.7 L634.3,197.4 L643.5,234.7 L640.4,235.5 L646.8,177.3 L653.2,235.5 L649.0,236.0 Q649.0,206.0 669.7,204.5 Q690.4,206.0 690.4,236.0 L682.1,238.0 L691.2,189.7 L700.3,238.0 L694.5,236.0 Q694.5,211.8 715.2,210.6 Q735.9,211.8 735.9,236.0 L727.6,236.0 Q727.6,202.1 748.2,200.4 Q768.8,202.1 768.8,236.0 L760.5,236.0 Q760.5,215.8 781.2,214.8 Q801.8,215.8 801.8,236.0 L793.6,236.0 Q793.6,216.6 813.1,215.6 Q832.7,216.6 832.7,236.0 L824.8,238.6 L834.2,179.8 L843.5,238.6 L835.7,236.0 Q835.7,207.6 857.2,206.1 Q878.8,207.6 878.8,236.0 L870.2,238.2 L875.3,178.9 L880.5,238.2 L878.2,237.3 L887.4,181.6 L896.5,237.3 L892.1,235.0 L898.6,194.8 L905.1,235.0 L901.6,234.0 L910.2,194.1 L918.8,234.0 L912.6,233.6 L919.8,179.0 L926.9,233.6 L921.6,233.7 L927.5,180.2 L933.4,233.7 L928.3,236.0 Q928.3,204.8 948.4,203.2 Q968.5,204.8 968.5,236.0 L960.5,236.0 Q960.5,203.9 976.1,202.3 Q991.6,203.9 991.6,236.0 L985.4,236.0 Q985.4,209.0 1002.7,207.6 Q1019.9,209.0 1019.9,236.0 L1013.0,236.0 Q1013.0,203.1 1036.0,201.5 Q1059.0,203.1 1059.0,236.0 L1049.8,234.0 L1056.4,192.1 L1063.1,234.0 L1060.6,236.7 L1070.1,188.8 L1079.5,236.7 L1073.7,236.0 Q1073.7,203.7 1092.1,202.0 Q1110.5,203.7 1110.5,236.0 L1103.1,236.0 Q1103.1,202.3 1122.7,200.6 Q1142.4,202.3 1142.4,236.0 L1134.5,236.2 L1141.3,179.5 L1148.2,236.2 L1143.5,236.0 Q1143.5,216.0 1160.7,215.0 Q1178.0,216.0 1178.0,236.0 L1171.1,236.0 Q1171.1,202.5 1188.6,200.8 Q1206.1,202.5 1206.1,236.0 L1199.1,234.3 L1208.8,196.5 L1218.4,234.3 L1213.3,236.0 Q1213.3,207.6 1234.4,206.2 Q1255.4,207.6 1255.4,236.0 L1247.0,235.2 L1254.0,206.0 L1261.0,235.2 L1259.3,233.9 L1267.8,184.7 L1276.3,233.9 L1272.7,233.8 L1278.7,186.0 L1284.6,233.8 L1283.2,233.6 L1291.4,172.8 L1299.5,233.6 L1297.9,238.9 L1305.9,188.6 L1313.9,238.9 L1308.7,236.0 Q1308.7,210.4 1327.9,209.1 Q1347.0,210.4 1347.0,236.0 L1339.4,235.1 L1345.5,194.7 L1351.7,235.1 L1347.8,236.0 Q1347.8,207.9 1363.9,206.5 Q1380.0,207.9 1380.0,236.0 L1373.6,238.3 L1379.3,186.2 L1385.0,238.3 L1381.1,235.2 L1387.3,194.9 L1393.4,235.2 L1390.3,237.7 L1398.5,183.0 L1406.8,237.7 L1403.6,236.0 Q1403.6,204.5 1418.5,203.0 Q1433.4,204.5 1433.4,236.0 L1427.4,236.8 L1436.7,193.6 L1446.0,236.8 L1440,236 L1440,260 Z"/>
+</svg>
+  </section>
 
-    <ul class="social-row" aria-label="Social links">
-      <li>
-        <a href="https://instagram.com/keerats.08" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://x.com/keerats08" target="_blank" rel="noopener" aria-label="X (Twitter)" class="social-link">
-          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M3 3h4.2l4.1 5.6L16 3h4.6l-6.5 8.1L21 21h-4.2l-4.4-5.9L7 21H2.4l6.9-8.6L3 3Z"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/codingwithdaas" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
-          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.51-3.5-.7-3.72-1.34-.13-.33-.68-1.34-1.16-1.61-.4-.22-.97-.76-.01-.77.9-.01 1.55.85 1.76 1.21 1.03 1.78 2.68 1.28 3.33.97.1-.76.4-1.28.73-1.57-2.55-.29-5.21-1.32-5.21-5.86 0-1.29.45-2.35 1.19-3.18-.12-.29-.52-1.49.12-3.11 0 0 .98-.32 3.2 1.22a10.94 10.94 0 0 1 5.82 0c2.22-1.54 3.2-1.22 3.2-1.22.64 1.62.24 2.82.12 3.11.74.83 1.19 1.88 1.19 3.18 0 4.55-2.67 5.57-5.22 5.86.42.37.78 1.09.78 2.2 0 1.59-.01 2.87-.01 3.27 0 .27.18.6.69.49C19.13 20.57 22 16.75 22 12.25 22 6.58 17.52 2 12 2Z"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/keerat-s08/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
-          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.7 2.4 4.7 5.6V21h-4v-5.4c0-1.3-.02-2.95-1.8-2.95-1.8 0-2.1 1.4-2.1 2.85V21h-4V9Z"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="mailto:codingwithdaas@gmail.com" aria-label="Email" class="social-link" id="email-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>
-        </a>
-      </li>
+  <section class="play" id="play" aria-labelledby="play-h">
+    <div class="wrap play-grid">
+      <div class="play-copy reveal">
+        <p class="eyebrow">Riyaz</p>
+        <h2 id="play-h">Play the <em>tabla</em>.</h2>
+        <p class="lede">I co-founded SacMusicals to make tabla more accessible. So here's a pair you can play, right now. Headphones please! 🎧</p>
+        <ul class="how">
+          <li><span class="sw" style="background:#ffc27a"></span><span><b>Drag</b> to turn them around.</span></li>
+          <li><span class="sw" style="background:#f2898f"></span><span><b>Right drum (dayan):</b> rim is <i>Na</i>, middle is <i>Tin</i>, black centre is <i>Tun</i>.</span></li>
+          <li><span class="sw" style="background:#b9a6ff"></span><span><b>Left drum (bayan):</b> open skin is <i>Ge</i>, black spot is <i>Ke</i>.</span></li>
+        </ul>
+        <div class="bols" role="group" aria-label="Tabla strokes">
+          <button class="bol" data-bol="Na" type="button">Na <kbd>J</kbd></button>
+          <button class="bol" data-bol="Tin" type="button">Tin <kbd>K</kbd></button>
+          <button class="bol" data-bol="Tun" type="button">Tun <kbd>L</kbd></button>
+          <button class="bol" data-bol="Ge" type="button">Ge <kbd>D</kbd></button>
+          <button class="bol" data-bol="Ke" type="button">Ke <kbd>F</kbd></button>
+        </div>
+        <button class="theka-btn" id="thekaBtn" type="button" aria-pressed="false">
+          <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>
+          <span>Play teentaal</span>
+        </button>
+        <div class="matras" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="stage reveal" id="stage">
+        <div class="stage-loading" id="stageLoading">tuning the dayan…</div>
+        <div class="bol-big" id="bolBig" aria-live="polite"></div>
+        <p class="stage-hint" id="stageHint">drag to turn · tap the drum heads</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="wrap about-grid">
+      <div class="photos reveal">
+        <figure class="arch"><img src="assets/img/keerat-portrait.webp" srcset="assets/img/keerat-portrait-sm.webp 600w, assets/img/keerat-portrait.webp 981w" sizes="(max-width: 900px) 80vw, 420px" alt="Portrait of Keerat Singh in a navy turban and black blazer" width="981" height="1012" loading="lazy"></figure>
+        <figure class="polaroid"><img src="assets/img/keerat-tahoe-sm.webp" alt="Keerat on a boat on a mountain lake, smiling in sunglasses" width="600" height="800" loading="lazy"></figure>
+      </div>
+      <div class="about-copy reveal">
+        <p class="eyebrow">About</p>
+        <h2 id="about-h">Exploring, breaking, <em>figuring&nbsp;out</em>.</h2>
+        <p class="lede">Student developer passionate about AI, bioinformatics, and healthcare technology. Outside of code, I enjoy philosophy, Pokémon, sunsets, and exploring new ideas.</p>
+        <p class="body">My long-term goal is to contribute to advancements in AI and bioinformatics that improve healthcare accessibility, efficiency, and patient outcomes.</p>
+        <p class="mini-label">Things I'm into <span>· tap one</span></p>
+        <ul class="interests">
+          <li><a href="#journey" data-filter="bio">AI / ML</a></li>
+          <li><a href="#journey" data-filter="bio">Bioinformatics</a></li>
+          <li><a href="#journey" data-filter="bio">Healthcare tech</a></li>
+          <li><a href="#journey" data-filter="energy">Renewable energy</a></li>
+          <li><a href="#journey" data-filter="web">Computer science</a></li>
+          <li><a href="#play">Tabla &amp; kirtan</a></li>
+          <li><a href="#journey" data-filter="all">Pokémon</a></li>
+          <li><a href="#sunsets">Sunsets</a></li>
+          <li><a href="#thoughts">Philosophy</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="journey" id="journey" aria-labelledby="journey-h">
+    <div class="wrap">
+      <div class="journey-head reveal">
+        <div>
+          <p class="eyebrow">Journey</p>
+          <h2 id="journey-h">Collect the <em>cards</em>.</h2>
+          <p class="lede">Everything I've built or been part of. Tap a card to flip it.</p>
+        </div>
+        <div class="dex" aria-live="polite">
+          <div class="dex-pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <span id="dexCount">0 / 6 flipped</span>
+        </div>
+      </div>
+      <div class="filters reveal" role="group" aria-label="Filter cards">
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="bio" aria-pressed="false">AI &amp; bio</button>
+        <button type="button" class="chip" data-filter="web" aria-pressed="false">Web</button>
+        <button type="button" class="chip" data-filter="energy" aria-pressed="false">Energy</button>
+        <button type="button" class="chip" data-filter="seva" aria-pressed="false">Music &amp; seva</button>
+      </div>
+
+      <div class="cards">
+        <!-- 01 SacMusicals -->
+        <article class="card" data-el="music" data-tags="web seva" style="--el:#ffc27a">
+          <div class="card-inner">
+            <div class="face front">
+              <header class="card-top"><h3>SacMusicals</h3><span class="el"><svg viewBox="0 0 16 16" aria-hidden="true"><ellipse cx="8" cy="4" rx="5" ry="2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3 4v6c0 1.2 2.2 2.2 5 2.2s5-1 5-2.2V4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>Music</span></header>
+              <div class="art"><img src="assets/img/proj-sacmusicals.webp" alt="Hand-made tabla with leather straps and wooden dowels" loading="lazy" width="900" height="868"><img class="art-logo" src="assets/img/logo-sacmusicals.webp" alt="" loading="lazy" width="400" height="224"></div>
+              <p class="role">Co-founder</p>
+              <ul class="moves"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Bootstrap</li><li>Git</li></ul>
+              <footer class="card-foot"><span>No. 01</span><span>live site</span></footer>
+              <button class="card-flip" type="button" aria-label="Flip the SacMusicals card"></button>
+            </div>
+            <div class="face back" inert>
+              <h3>SacMusicals</h3>
+              <p>A website for a local business that creates and repairs traditional Indian tablas, making them more accessible to the community. I also handled social media content and community outreach.</p>
+              <div class="links"><a href="https://www.sacmusicals.com" target="_blank" rel="noopener">sacmusicals.com ↗</a><a href="https://github.com/codingwithdaas/sac-musicals" target="_blank" rel="noopener">Code ↗</a></div>
+              <button class="flip-back" type="button">Flip back</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 WinSun Green -->
+        <article class="card" data-el="energy" data-tags="web energy" style="--el:#ffe08a">
+          <div class="card-inner">
+            <div class="face front">
+              <header class="card-top"><h3>WinSun Green</h3><span class="el"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M3 13l1.4-1.4M11.6 4.4 13 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Energy</span></header>
+              <div class="art"><img src="assets/img/proj-winsun.webp" alt="Wind turbines and solar panels at sunset" loading="lazy" width="503" height="827" style="object-position:50% 40%"><img class="art-logo round" src="assets/img/logo-winsun.webp" alt="" loading="lazy" width="300" height="300"></div>
+              <p class="role">Software Engineering Intern</p>
+              <ul class="moves"><li>React</li><li>TypeScript</li><li>Next.js</li><li>Node.js</li><li>AI</li></ul>
+              <footer class="card-foot"><span>No. 02</span><span>wind + solar</span></footer>
+              <button class="card-flip" type="button" aria-label="Flip the WinSun Green card"></button>
+            </div>
+            <div class="face back" inert>
+              <h3>WinSun Green Pvt. Ltd.</h3>
+              <p>Built web tools and automated tasks at a renewable energy company working in wind and solar across India. I'm rebuilding their corporate site in Next.js: mobile-first, faster, and better for SEO and accessibility.</p>
+              <div class="links"><a href="https://winsungreen.com" target="_blank" rel="noopener">winsungreen.com ↗</a><a href="https://github.com/codingwithdaas/winsun-green-website" target="_blank" rel="noopener">Code ↗</a></div>
+              <button class="flip-back" type="button">Flip back</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 Breast cancer classifier -->
+        <article class="card" data-el="bio" data-tags="bio" style="--el:#8fe0d0">
+          <div class="card-inner">
+            <div class="face front">
+              <header class="card-top"><h3>Diagnosis Classifier</h3><span class="el"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="4" cy="11" r="1.6" fill="currentColor"/><circle cx="8" cy="6" r="1.6" fill="currentColor"/><circle cx="12" cy="9" r="1.6" fill="currentColor"/><path d="M4 11 8 6l4 3" fill="none" stroke="currentColor" stroke-width="1"/></svg>Bio</span></header>
+              <div class="art art-pca"><canvas class="pca" aria-label="PCA projection of 569 tissue samples: benign and malignant cases form two mostly separate clusters" role="img"></canvas><span class="art-cap">PCA · 569 samples · 63.2% variance</span></div>
+              <p class="role">Teens in Health · AI &amp; Bioinformatics</p>
+              <ul class="moves"><li>Python</li><li>scikit-learn</li><li>pandas</li><li>seaborn</li></ul>
+              <footer class="card-foot"><span>No. 03</span><span>98.8% accuracy</span></footer>
+              <button class="card-flip" type="button" aria-label="Flip the diagnosis classifier card"></button>
+            </div>
+            <div class="face back" inert>
+              <h3>Breast cancer diagnosis classifier</h3>
+              <p>Compared logistic regression, random forest, SVM and KNN on cell-morphology features from the Wisconsin Diagnostic dataset. Logistic regression won: 98.8% test accuracy, AUC 0.998, and only 2 misclassifications out of 171 test cases.</p>
+              <p class="small">Built to support a research article published in the <a href="https://teensinhealth.org/ourpublications/2026/9/20/ai-amp-bioinformatics-journal-summer-2026" target="_blank" rel="noopener">Teens in Health journal (pg. 277)</a>.</p>
+              <div class="links"><a href="https://github.com/codingwithdaas/breast-cancer-ml-classification" target="_blank" rel="noopener">Code &amp; results ↗</a></div>
+              <button class="flip-back" type="button">Flip back</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04 UCD Health -->
+        <article class="card" data-el="bio" data-tags="bio" style="--el:#8fe0d0">
+          <div class="card-inner">
+            <div class="face front">
+              <header class="card-top"><h3>UCD Health</h3><span class="el"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 1c0 4 6 4 6 7s-6 3-6 7M11 1c0 4-6 4-6 7s6 3 6 7" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Bio</span></header>
+              <div class="art art-helix"><canvas class="helix" aria-hidden="true"></canvas></div>
+              <p class="role">Bioinformatics &amp; ML Research</p>
+              <ul class="moves"><li>Python</li><li>Machine Learning</li><li>Computational Biology</li></ul>
+              <footer class="card-foot"><span>No. 04</span><span>research</span></footer>
+              <button class="card-flip" type="button" aria-label="Flip the UCD Health research card"></button>
+            </div>
+            <div class="face back" inert>
+              <h3>Bioinformatics &amp; ML Research @ UCD Health</h3>
+              <p>Explored AI/ML applications in disease understanding. Nothing to see here yet. (*wink wink*)</p>
+              <button class="flip-back" type="button">Flip back</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 05 Keertan Pothi -->
+        <article class="card" data-el="seva" data-tags="web seva" style="--el:#f2898f">
+          <div class="card-inner">
+            <div class="face front">
+              <header class="card-top"><h3>Keertan Pothi</h3><span class="el"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.5C4 2.5 6 2.5 8 4c2-1.5 4-1.5 6-.5v9c-2-1-4-1-6 .5-2-1.5-4-1.5-6-.5z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 4v9" stroke="currentColor" stroke-width="1.3"/></svg>Seva</span></header>
+              <div class="art art-icon"><img src="assets/img/proj-keertanpothi.webp" alt="Keertan Pothi app icon, a golden Ik Onkar" loading="lazy" width="258" height="258"></div>
+              <p class="role">Dev Team Contributor</p>
+              <ul class="moves"><li>Angular</li><li>TypeScript</li><li>HTML</li><li>CSS</li></ul>
+              <footer class="card-foot"><span>No. 05</span><span>open source</span></footer>
+              <button class="card-flip" type="button" aria-label="Flip the Keertan Pothi card"></button>
+            </div>
+            <div class="face back" inert>
+              <h3>Keertan Pothi Dev Team</h3>
+              <p>Contributed to the Keertan Pothi web platform through frontend development, feature testing, and production improvements. Built a desktop-optimized layout and implemented comprehensive SEO infrastructure, including dynamic metadata, canonical URLs, JSON-LD structured data, XML sitemaps, robots.txt, Open Graph, Twitter Cards, and a reusable SEO service.</p>
+              <div class="links"><a href="https://keertanpothi.org/support" target="_blank" rel="noopener">keertanpothi.org ↗</a><a href="https://github.com/codingwithdaas/KeertanPothWeb1500px" target="_blank" rel="noopener">My fork ↗</a></div>
+              <button class="flip-back" type="button">Flip back</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 06 SacSangat Media Seva -->
+        <article class="card" data-el="sound" data-tags="seva" style="--el:#b9a6ff">
+          <div class="card-inner">
+            <div class="face front">
+              <header class="card-top"><h3>SacSangat</h3><span class="el"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h1M5 5v6M8 2v12M11 5v6M14 8h0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Sound</span></header>
+              <div class="art art-wave"><canvas class="wave" aria-hidden="true"></canvas>
+                <dl class="stats"><div><dt>recordings</dt><dd>550+</dd></div><div><dt>plays</dt><dd>300K+</dd></div><div><dt>countries</dt><dd>50</dd></div></dl>
+              </div>
+              <p class="role">Media Seva · Audio Engineering</p>
+              <ul class="moves"><li>DaVinci Resolve</li><li>Audio editing</li><li>Video editing</li></ul>
+              <footer class="card-foot"><span>No. 06</span><span>kirtan</span></footer>
+              <button class="card-flip" type="button" aria-label="Flip the SacSangat Media Seva card"></button>
+            </div>
+            <div class="face back" inert>
+              <h3>SacSangat Media Seva</h3>
+              <p>Recording, editing and publishing kirtan for the sangat: 550+ recordings with more than 300K plays across 50 countries.</p>
+              <div class="links"><button type="button" class="listen-btn" data-sc="https://soundcloud.com/sac-sangat">Listen here ♪</button><a href="https://soundcloud.com/sac-sangat" target="_blank" rel="noopener">SoundCloud ↗</a></div>
+              <button class="flip-back" type="button">Flip back</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="player" id="player" hidden>
+        <div class="player-head"><span>SacSangat on SoundCloud</span><button type="button" class="player-close" aria-label="Close player">✕</button></div>
+        <div class="player-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sunsets" id="sunsets" aria-labelledby="sunsets-h">
+    <div class="wrap sunsets-head reveal">
+      <div>
+        <p class="eyebrow">Sunsets</p>
+        <h2 id="sunsets-h">Skies I've <em>collected</em>.</h2>
+        <p class="lede">All shot by me. Hover one and the page borrows its light.</p>
+      </div>
+      <div class="strip-nav">
+        <button type="button" class="round-btn" data-dir="-1" aria-label="Previous photos">←</button>
+        <button type="button" class="round-btn" data-dir="1" aria-label="Next photos">→</button>
+      </div>
+    </div>
+    <ul class="strip" id="strip">
+      <li><button type="button" class="shot" data-glow="#ff8a3d" data-full="assets/img/sunset-field.webp"><img src="assets/img/sunset-field-sm.webp" alt="The sun dropping behind a line of pines beyond a grassy field" loading="lazy" width="600" height="800"></button></li>
+      <li><button type="button" class="shot" data-glow="#ff7a3a" data-full="assets/img/sunset-bridge.webp"><img src="assets/img/sunset-bridge-sm.webp" alt="Orange sky over a creek and a small bridge, violet clouds above" loading="lazy" width="600" height="800"></button></li>
+      <li><button type="button" class="shot" data-glow="#ff6a4a" data-full="assets/img/sunset-pond.webp"><img src="assets/img/sunset-pond-sm.webp" alt="Silhouetted trees and a pond reflecting a red-orange sunset" loading="lazy" width="600" height="800"></button></li>
+      <li><button type="button" class="shot" data-glow="#ff5a6a" data-full="assets/img/sunset-streaks.webp"><img src="assets/img/sunset-streaks-sm.webp" alt="Bands of coral and pink cloud under a blue-violet sky" loading="lazy" width="600" height="800"></button></li>
+      <li><button type="button" class="shot" data-glow="#ffa8a0" data-full="assets/img/sunset-pink-clouds.webp"><img src="assets/img/sunset-pink-clouds-sm.webp" alt="Scattered pink clouds across a soft blue sky" loading="lazy" width="600" height="800"></button></li>
+      <li><button type="button" class="shot" data-glow="#f08a50" data-full="assets/img/sunset-tahoe-smoke.webp"><img src="assets/img/sunset-tahoe-smoke-sm.webp" alt="A twisting orange band of cloud over a mountain lake at dusk" loading="lazy" width="600" height="450"></button></li>
+      <li><button type="button" class="shot" data-glow="#ff7a45" data-full="assets/img/sunset-tahoe-boats.webp"><img src="assets/img/sunset-tahoe-boats-sm.webp" alt="Two lit-up boats at a pier on a lake after sunset" loading="lazy" width="600" height="800"></button></li>
+      <li><button type="button" class="shot" data-glow="#ff3a4a" data-full="assets/img/sunset-last-light.webp"><img src="assets/img/sunset-last-light-sm.webp" alt="A thin red line of last light under dark clouds and a big tree" loading="lazy" width="600" height="800"></button></li>
     </ul>
-    </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="section-label-col">
-        <p class="eyebrow">/ ABOUT</p>
-      </div>
-      <div class="about-content">
-        <p>
-        Hi, I'm Keerat.<br>
-        <br>
-        I'm a student developer interested in artificial intelligence, bioinformatics, and healthcare technology. When I'm not coding, you'll probably find me thinking about philosophy, playing Pokémon, watching sunsets, or going down some random rabbit hole about something new.<br>
-        <br>
-        My life has taken me through a lot of different spaces — from software, community projects, research, and who knows where I'm off to next. I don't have everything figured out yet, but I enjoy learning, trying, and seeing where curiosity takes me. ¯\_(ツ)_/¯<br>
-        <br>
-        I believe technology is at its best when it helps people. More importantly, I believe people are at their best when they help each other. A lot of what I do comes from curiosity and a desire to be useful — whether that's building something, supporting my community, or simply taking the time to understand someone else's perspective.
-        </p>
+  <section class="thoughts" id="thoughts" aria-labelledby="thoughts-h">
+    <div class="wrap thoughts-inner reveal">
+      <p class="eyebrow" id="thoughts-h">Thoughts</p>
+      <!-- Add more thoughts to the THOUGHTS list in assets/main.js -->
+      <blockquote class="thought" id="thought" aria-live="polite"><p>Every mistake is a data point to improve your mental model.</p></blockquote>
+      <div class="thought-row">
+        <button type="button" class="ghost-btn" id="thoughtBtn">Another thought <span aria-hidden="true">✦</span></button>
+        <span class="thought-count" id="thoughtCount">1 / 3</span>
       </div>
     </div>
+    <span class="shooting" id="shooting" aria-hidden="true"></span>
   </section>
 
-  <!-- ================= Journey ================= -->
-  <section class="journey" id="journey">
-    <div class="container">
-      <p class="eyebrow">/ JOURNEY</p>
-      <h2 class="section-title">What I'm Up To</h2>
-
-      <div class="card-grid">
-
-        <article class="card">
-          <p class="card-tag">Leadership · Development · Arts</p>
-          <h3 class="card-title">Co-founder - <a href="https://www.sacmusicals.com" target="_blank" rel="noopener noreferrer">SacMusicals</a></h3>
-          <p class="card-desc">
-            SacMusicals started as a small idea: making tablas more accessible to our community.
-  I helped bring that idea online by building the website, managing our digital presence, and helping tell our story.
-            <br><br>
-            <a href="https://sacmusicals.com/about-us" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">
-            Learn more
-            </a>
-          </p>
-          <ul class="card-meta">
-            <li>Leadership</li><li>Production</li><li>HTML</li><li>CSS</li><li>JS</li><li>Bootstrap</li><li>Git</li>
-          </ul>
-        </article>
-        
-        <article class="card">
-          <p class="card-tag">Internship · Development</p>
-          <h3 class="card-title">Software Engineering Intern - WinSun Green Pvt. Ltd.</h3>
-          <p class="card-desc">
-          I'm working with WinSun Green to build software that makes everyday work easier.
-  From creating web tools to automating repetitive tasks, I've been learning what it means to build technology that people actually use.
-  It's been a chance to apply what I know while learning how development works in a real company. 
-          </p>
-          <ul class="card-meta">
-            <li>Renewable Energy</li><li>React</li><li>TypeScript</li><li>Node.js</li><li>A.I.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <p class="card-tag">Research · Publication</p>
-          <h3 class="card-title">Bioinformatics &amp; ML Research @ UCD Health</h3>
-          <p class="card-desc">
-          I'm exploring the intersection of biology and computer science — specifically how A.I. and machine learning can help us understand diseases.
-  Through research, data analysis, and building models, I'm learning how computational tools can be used to solve problems in healthcare.
-            <br><br>
-            <a href="https://github.com/codingwithdaas/breast-cancer-ml-classification" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">
-            Learn more
-            </a>
-          </p>
-          <ul class="card-meta">
-            <li>Python</li><li>Machine Learning</li><li>Bioinformatics</li><li>Computational Biology</li>
-          </ul>
-        </article>
-
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-h">Say <em>hi</em>.</h2>
+        <p class="lede">Email is the best way to reach me.</p>
+        <div class="email">
+          <a href="mailto:codingwithdaas@gmail.com" class="email-link">codingwithdaas@gmail.com</a>
+          <button type="button" class="ghost-btn" id="copyEmail">Copy</button>
+        </div>
       </div>
-
-      <br>
-      <br>
-
-      <h2 class="section-title">How I've Been Contributing</h2>
-
-      <div class="card-grid">
-
-        <article class="card">
-          <p class="card-tag">Development · Remote</p>
-          <h3 class="card-title">Keertan Pothi Dev Team Member</h3>
-          <p class="card-desc">
-          I've been contributing to Keertan Pothi, a project that helps preserve and share Sikh devotional scripture.
-  I've worked with the development team by testing features, finding bugs, and helping improve the experience for users around the world.
-            <br><br>  
-          <a href="https://keertanpothi.org/support" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">
-            Learn more
-            </a>
-          </p>
-          <ul class="card-meta">
-            <li>Angular</li><li>Git</li><li>TypeScript</li><li>HTML</li><li>SCSS</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <p class="card-tag">Audio Engineering · Media · Community</p>
-          <h3 class="card-title">SacSangat Media Seva</h3>
-          <p class="card-desc">
-           A lot of my work happens behind the scenes — cleaning up recordings, editing audio, and helping share keertan with people across the world. It's been a reminder that technology isn't only about creating new things; sometimes it's about preserving and sharing things that already matter.<br><br>
-            <strong>Impact:</strong> 550+ recordings published · 300K+ plays · Reached audiences in 50 countries
-           <br><br>  
-          <a href="https://soundcloud.com/sac-sangat" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">
-            Learn more
-            </a>
-          </p>
-          <ul class="card-meta">
-            <li>Audio Engineering</li><li>Video/Audio Editing</li><li>DaVinci Resolve</li><li>Sound Design</li><li>Service</li>
-          </ul>
-        </article>
-
-      </div>
+      <nav class="constellation reveal" aria-label="Social links">
+        <svg viewBox="0 0 400 300" aria-hidden="true" class="c-lines">
+          <polyline points="60,70 170,40 300,95 250,215 110,230 60,70" fill="none"/>
+          <line x1="170" y1="40" x2="250" y2="215"/>
+        </svg>
+        <a class="star" style="--x:15%;--y:23%" href="https://github.com/codingwithdaas" target="_blank" rel="noopener"><i></i><span>GitHub</span></a>
+        <a class="star" style="--x:42.5%;--y:13%" href="https://linkedin.com/in/keerat-s08/" target="_blank" rel="noopener"><i></i><span>LinkedIn</span></a>
+        <a class="star" style="--x:75%;--y:32%" href="https://instagram.com/keerats.08" target="_blank" rel="noopener"><i></i><span>Instagram</span></a>
+        <a class="star" style="--x:62.5%;--y:72%" href="https://x.com/keerats08" target="_blank" rel="noopener"><i></i><span>X</span></a>
+        <a class="star" style="--x:27.5%;--y:77%" href="https://soundcloud.com/sac-sangat" target="_blank" rel="noopener"><i></i><span>SoundCloud</span></a>
+      </nav>
     </div>
+    <footer class="foot wrap">
+      <span>© <span id="year">2026</span> Keerat Singh</span>
+      <a href="#top" class="to-top">Back to golden hour ↑</a>
+    </footer>
   </section>
-
-  <!-- ================= SAY HELLO / FOOTER ================= -->
-  <section class="contact" id="contact">
-    <div class="container contact-inner">
-      <p class="eyebrow">/ SAY HELLO</p>
-      <h2 class="section-title">Let's Connect</h2>
-      <p class="contact-sub">
-        Open to internships, research opportunities, and collaboration in STEM.
-      </p>
-
-      <a href="mailto:codingwithdaas@gmail.com" class="btn btn-primary" id="email-btn">
-        codingwithdaas@gmail.com
-      </a>
-
-      <ul class="social-row social-row-footer" aria-label="Social links">
-        <li>
-          <a href="https://instagram.com/keerats.08" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://x.com/keerats08" target="_blank" rel="noopener" aria-label="X (Twitter)" class="social-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M3 3h4.2l4.1 5.6L16 3h4.6l-6.5 8.1L21 21h-4.2l-4.4-5.9L7 21H2.4l6.9-8.6L3 3Z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/codingwithdaas" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.51-3.5-.7-3.72-1.34-.13-.33-.68-1.34-1.16-1.61-.4-.22-.97-.76-.01-.77.9-.01 1.55.85 1.76 1.21 1.03 1.78 2.68 1.28 3.33.97.1-.76.4-1.28.73-1.57-2.55-.29-5.21-1.32-5.21-5.86 0-1.29.45-2.35 1.19-3.18-.12-.29-.52-1.49.12-3.11 0 0 .98-.32 3.2 1.22a10.94 10.94 0 0 1 5.82 0c2.22-1.54 3.2-1.22 3.2-1.22.64 1.62.24 2.82.12 3.11.74.83 1.19 1.88 1.19 3.18 0 4.55-2.67 5.57-5.22 5.86.42.37.78 1.09.78 2.2 0 1.59-.01 2.87-.01 3.27 0 .27.18.6.69.49C19.13 20.57 22 16.75 22 12.25 22 6.58 17.52 2 12 2Z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/keerat-s08/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
-            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.7 2.4 4.7 5.6V21h-4v-5.4c0-1.3-.02-2.95-1.8-2.95-1.8 0-2.1 1.4-2.1 2.85V21h-4V9Z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:codingwithdaas@gmail.com" aria-label="Email" class="social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>
-          </a>
-        </li>
-      </ul>
-
-      <div class="footer-bottom">
-        <p>© <span id="year"></span> Keerat Singh. Made with ❤️.</p>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-</main>
-
-<script src="script.js"></script>
+<script src="assets/audio.js"></script>
+<script src="assets/main.js"></script>
+<script src="assets/sections.js"></script>
 </body>
 </html>
