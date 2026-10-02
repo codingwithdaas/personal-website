@@ -25,7 +25,7 @@ Native only: CSS transitions, canvas, and three.js for the tabla. There's no ani
 
 ## Interactive pieces
 - **Sky slider** (hero): native range input, keyboard accessible.
-- **3D tabla** (`build/src/tabla.js` → `assets/tabla.js`, loaded lazily): drag to turn, tap the heads to play. Dayan: rim Na · middle Tin · syahi Tun. Bayan: open Ge · syahi Ke. Keys J K L D F. The Teentaal button plays the 16-beat theka.
+- **3D tabla** (`src/tabla.js` → `assets/tabla.js`, loaded lazily): drag to turn, tap the heads to play. Dayan: rim Na · middle Tin · syahi Tun. Bayan: open Ge · syahi Ke. Keys J K L D F. The Teentaal button plays the 16-beat theka.
 - **Tanpura** (nav): a synthesized Pa–Sa–Sa–Sa drone, off by default.
 - **Project cards**: flip, collection counter, filters, holo tilt (fine pointers only).
 - **Sunset strip**: hovering a photo tints the page with its light; click to open the lightbox.
@@ -42,6 +42,6 @@ All audio is synthesized with the Web Audio API in `assets/audio.js`, so there a
 
 ## Rebuilding the tabla bundle
 ```
-cd build && npm i three esbuild
-npx esbuild src/tabla.js --bundle --format=esm --minify --outfile=../site/assets/tabla.js
+npm install
+npm run build:tabla
 ```

@@ -10,7 +10,7 @@ My personal website. It's one long scroll through an evening: the page opens at 
 
 ## About Me
 
-I'm a high school student interested in computer engineering, AI/ML, bioinformatics, and renewable energy. I like exploring things, breaking things, and figuring out how things work.
+I'm a high school student interested in computer science, AI/ML, bioinformatics, and renewable energy. I like exploring things, breaking things, and figuring out how things work.
 
 I wanted this site to show what I'm working on and also what I'm into: sunsets, tabla and kirtan, Pokémon, and philosophy.
 
@@ -38,9 +38,9 @@ I wanted this site to show what I'm working on and also what I'm into: sunsets, 
 |---|---|
 | [SacMusicals](https://www.sacmusicals.com) | Website for a local business that makes and repairs tablas ([code](https://github.com/codingwithdaas/sac-musicals)) |
 | WinSun Green | Software engineering internship at a renewable energy company ([code](https://github.com/codingwithdaas/winsun-green-website)) |
-| Breast cancer diagnosis classifier | ML project from the Teens in Health AI & Bioinformatics cohort, 98.8% test accuracy ([code](https://github.com/codingwithdaas/breast-cancer-ml-classification)) |
+| Breast cancer diagnosis classifier | ML project from the Teens in Health AI & Bioinformatics cohort, 98.8% test accuracy, published in the [Teens in Health journal](https://teensinhealth.org/ourpublications/2026/9/20/ai-amp-bioinformatics-journal-summer-2026) (pg. 277) ([code](https://github.com/codingwithdaas/breast-cancer-ml-classification)) |
 | UCD Health | Bioinformatics & ML research |
-| [Keertan Pothi](https://keertanpothi.org/support) | Dev team contributor on a Sikh scripture preservation project ([my fork](https://github.com/codingwithdaas/KeertanPothWeb1500px)) |
+| [Keertan Pothi](https://keertanpothi.org/support) | Frontend, testing and SEO for a Sikh scripture preservation platform ([my fork](https://github.com/codingwithdaas/KeertanPothWeb1500px)) |
 | [SacSangat Media Seva](https://soundcloud.com/sac-sangat) | Audio engineering: 550+ recordings, 300K+ plays, 50 countries |
 
 The star map on the classifier card is real data: a PCA projection of all 569 samples from the Wisconsin Diagnostic dataset, computed the same way as in the project repo.
@@ -124,4 +124,4 @@ More detail is in [DESIGN.md](DESIGN.md).
 
 ---
 
-> "Technology is at its best when it helps people."
+> "Every mistake is a data point to improve your mental model."

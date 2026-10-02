@@ -1,0 +1,13 @@
+{
+  "name": "keerat-fyi",
+  "private": true,
+  "description": "Personal website. Static; npm is only needed to rebuild the 3D tabla bundle.",
+  "scripts": {
+    "build:tabla": "esbuild src/tabla.js --bundle --format=esm --minify --outfile=assets/tabla.js",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "three": "^0.186.1"
+  }
+}
