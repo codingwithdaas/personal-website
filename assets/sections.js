@@ -1,4 +1,4 @@
-/* keerat.fyi — cards, sunsets, thoughts, contact */
+/* keerat.fyi — cards, gallery, sunsets, thoughts, contact */
 (function () {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = (s, el = document) => el.querySelector(s);
@@ -159,6 +159,104 @@
     player.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'nearest' });
   }));
   $('.player-close').addEventListener('click', () => { player.hidden = true; });
+
+  /* ---------- gallery: posts from @inkeeratseyes ----------
+     assets/data/instagram.json is written once a day by
+     .github/workflows/instagram.yml. The section stays hidden until it has posts. */
+  (async () => {
+    const sec = $('#gallery');
+    let data;
+    try {
+      const r = await fetch('assets/data/instagram.json', { cache: 'no-cache' });
+      if (!r.ok) return;
+      data = await r.json();
+    } catch { return; }
+    const posts = (data.posts || []).filter((p) => p.images && p.images.length);
+    if (!sec || !posts.length) return;
+    sec.hidden = false;
+    $$('[data-gallery-link]').forEach((el) => { el.hidden = false; });
+    if (data.profile) $$('.ig-follow').forEach((a) => { a.href = data.profile; });
+
+    const grid = $('#galleryGrid'), more = $('#galleryMore'), glow = $('.borrow');
+    const PAGE = 12;
+    let shown = 0;
+    const icon = (kind) => kind === 'video'
+      ? '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg>'
+      : '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="2.5" width="8.5" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M2.5 5.5v7a1 1 0 0 0 1 1h7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>';
+
+    function addTiles() {
+      const frag = document.createDocumentFragment();
+      posts.slice(shown, shown + PAGE).forEach((p, k) => {
+        const i = shown + k, im = p.images[0];
+        const li = document.createElement('li');
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'ig-tile';
+        b.style.setProperty('--glow-c', p.glow || '#ffc27a');
+        const img = document.createElement('img');
+        img.src = im.sm; img.alt = p.alt || 'Photo by Keerat'; img.loading = 'lazy'; img.decoding = 'async';
+        img.width = im.sw; img.height = im.sh;
+        b.append(img);
+        const kind = p.images.length > 1 ? 'stack' : (im.video ? 'video' : '');
+        if (kind) b.insertAdjacentHTML('beforeend', `<span class="ig-badge">${icon(kind)}</span>`);
+        const on = () => { glow.style.setProperty('--borrow', p.glow || '#ffc27a'); glow.classList.add('on'); };
+        const off = () => glow.classList.remove('on');
+        b.addEventListener('pointerenter', on); b.addEventListener('focus', on);
+        b.addEventListener('pointerleave', off); b.addEventListener('blur', off);
+        b.addEventListener('click', () => { open(i); });
+        li.append(b); frag.append(li);
+      });
+      grid.append(frag);
+      shown = Math.min(posts.length, shown + PAGE);
+      more.hidden = shown >= posts.length;
+    }
+    more.addEventListener('click', () => {
+      const first = shown; addTiles();
+      const t = $$('.ig-tile', grid)[first]; if (t) t.focus({ preventScroll: true });
+    });
+    addTiles();
+
+    // lightbox
+    const box = $('#igBox'), bImg = $('#igImg'), cap = $('#igCap'), dots = $('#igDots'), date = $('#igDate'), link = $('#igLink');
+    let cur = 0, sub = 0;
+    const fmt = new Intl.DateTimeFormat(undefined, { month: 'long', day: 'numeric', year: 'numeric' });
+    function show(i, j = 0) {
+      cur = (i + posts.length) % posts.length; const p = posts[cur];
+      sub = Math.max(0, Math.min(j, p.images.length - 1)); const im = p.images[sub];
+      bImg.src = im.src; bImg.alt = p.alt || ''; bImg.width = im.w; bImg.height = im.h;
+      cap.textContent = p.caption || ''; cap.hidden = !p.caption;
+      if (p.timestamp) { date.dateTime = p.timestamp; date.textContent = fmt.format(new Date(p.timestamp)); }
+      link.href = p.permalink || data.profile;
+      link.textContent = im.video ? 'Watch on Instagram ↗' : 'View on Instagram ↗';
+      const dotHadFocus = dots.contains(document.activeElement);
+      dots.replaceChildren(...(p.images.length > 1 ? p.images.map((_, k) => {
+        const d = document.createElement('button');
+        d.type = 'button'; d.className = 'ig-dot'; d.setAttribute('aria-label', `Photo ${k + 1} of ${p.images.length}`);
+        if (k === sub) d.setAttribute('aria-current', 'true');
+        d.addEventListener('click', () => show(cur, k));
+        return d;
+      }) : []));
+      if (dotHadFocus) (dots.querySelector('[aria-current]') || $('#igNext')).focus();
+      glow.style.setProperty('--borrow', p.glow || '#ffc27a'); glow.classList.add('on');
+    }
+    function open(i) { show(i); box.showModal(); }
+    // arrows step through a carousel's photos first, then on to the next post
+    const step = (d) => {
+      const n = posts[cur].images.length;
+      if (sub + d >= 0 && sub + d < n) show(cur, sub + d);
+      else if (d > 0) show(cur + 1, 0);
+      else show(cur - 1, posts[(cur - 1 + posts.length) % posts.length].images.length - 1);
+    };
+    $('#igPrev').addEventListener('click', () => step(-1));
+    $('#igNext').addEventListener('click', () => step(1));
+    $('#igClose').addEventListener('click', () => box.close());
+    box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
+    // on the window, so the arrows keep working after a carousel dot that had focus is redrawn
+    addEventListener('keydown', (e) => { if (!box.open) return; if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+    let tx = null;
+    box.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', (e) => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); tx = null; });
+    box.addEventListener('close', () => { glow.classList.remove('on'); const t = $$('.ig-tile', grid)[cur]; if (t) t.focus({ preventScroll: true }); });
+  })();
 
   /* ---------- sunsets ---------- */
   const strip = $('#strip'), shots = $$('.shot'), borrow = $('.borrow');

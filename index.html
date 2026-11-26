@@ -24,6 +24,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#play">Tabla</a></li>
     <li><a href="#journey">Journey</a></li>
+    <li data-gallery-link hidden><a href="#gallery">Gallery</a></li>
     <li><a href="#sunsets">Sunsets</a></li>
     <li><a href="#thoughts">Thoughts</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -35,8 +36,21 @@
   </button>
 </header>
 <nav class="menu" id="menu" hidden aria-label="Sections">
-  <a href="#about">About</a><a href="#play">Tabla</a><a href="#journey">Journey</a><a href="#sunsets">Sunsets</a><a href="#thoughts">Thoughts</a><a href="#contact">Contact</a>
+  <a href="#about">About</a><a href="#play">Tabla</a><a href="#journey">Journey</a><a href="#gallery" data-gallery-link hidden>Gallery</a><a href="#sunsets">Sunsets</a><a href="#thoughts">Thoughts</a><a href="#contact">Contact</a>
 </nav>
+<dialog class="lightbox ig-box" id="igBox" aria-label="Photo from @inkeeratseyes">
+  <figure class="ig-fig">
+    <img id="igImg" alt="">
+    <figcaption>
+      <div class="ig-dots" id="igDots" role="group" aria-label="Photos in this post"></div>
+      <p class="ig-cap" id="igCap"></p>
+      <p class="ig-meta"><time id="igDate"></time> · <a id="igLink" href="https://www.instagram.com/inkeeratseyes/" target="_blank" rel="noopener">View on Instagram ↗</a></p>
+    </figcaption>
+  </figure>
+  <button type="button" class="lb-btn lb-prev" id="igPrev" aria-label="Previous post">←</button>
+  <button type="button" class="lb-btn lb-next" id="igNext" aria-label="Next post">→</button>
+  <button type="button" class="lb-btn lb-close" id="igClose" aria-label="Close">✕</button>
+</dialog>
 <dialog class="lightbox" id="lightbox" aria-label="Sunset photo">
   <img id="lbImg" alt="">
   <button type="button" class="lb-btn lb-prev" aria-label="Previous photo">←</button>
@@ -212,20 +226,22 @@
           </div>
         </article>
 
-        <!-- 04 UCD Health -->
+        <!-- 04 Discovery Engine (UCD Health) -->
         <article class="card" data-el="bio" data-tags="bio" style="--el:#8fe0d0">
           <div class="card-inner">
             <div class="face front">
-              <header class="card-top"><h3>UCD Health</h3><span class="el"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 1c0 4 6 4 6 7s-6 3-6 7M11 1c0 4-6 4-6 7s6 3 6 7" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Bio</span></header>
+              <header class="card-top"><h3>Discovery Engine</h3><span class="el"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 1c0 4 6 4 6 7s-6 3-6 7M11 1c0 4-6 4-6 7s6 3 6 7" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Bio</span></header>
               <div class="art art-helix"><canvas class="helix" aria-hidden="true"></canvas></div>
-              <p class="role">Bioinformatics &amp; ML Research</p>
-              <ul class="moves"><li>Python</li><li>Machine Learning</li><li>Computational Biology</li></ul>
-              <footer class="card-foot"><span>No. 04</span><span>research</span></footer>
-              <button class="card-flip" type="button" aria-label="Flip the UCD Health research card"></button>
+              <p class="role">UCD Health · Bioinformatics &amp; ML Research</p>
+              <ul class="moves"><li>Python</li><li>PyTorch</li><li>scikit-survival</li><li>lifelines</li><li>Statistics</li></ul>
+              <footer class="card-foot"><span>No. 04</span><span>164 tests</span></footer>
+              <button class="card-flip" type="button" aria-label="Flip the Discovery Engine card"></button>
             </div>
             <div class="face back" inert>
-              <h3>Bioinformatics &amp; ML Research @ UCD Health</h3>
-              <p>Explored AI/ML applications in disease understanding. Nothing to see here yet. (*wink wink*)</p>
+              <h3>Discovery Engine @ UCD Health</h3>
+              <p>Reviewing a bladder cancer lab's analyses, I kept asking the same thing: is this "finding" real, or just luck? So I designed an engine that searches tumor data for biomarkers with seven methods, from clustering to neural networks, then tries hard to prove every candidate is fake. Statistics are corrected for everything it tried, and it reports the rejects too.</p>
+              <p class="small">164 tests on synthetic data with planted signals, then run on public TCGA bladder cancer data. Research software, not a clinical tool.</p>
+              <div class="links"><a href="https://github.com/codingwithdaas/discoveryengine" target="_blank" rel="noopener">Code ↗</a></div>
               <button class="flip-back" type="button">Flip back</button>
             </div>
           </div>
@@ -279,6 +295,19 @@
         <div class="player-body"></div>
       </div>
     </div>
+  </section>
+
+  <section class="gallery" id="gallery" aria-labelledby="gallery-h" hidden>
+    <div class="wrap gallery-head reveal">
+      <div>
+        <p class="eyebrow">Gallery</p>
+        <h2 id="gallery-h">Through my <em>eyes</em>.</h2>
+        <p class="lede">Everything from my photo account, synced every day. Tap one to see it bigger.</p>
+      </div>
+      <a class="ghost-btn ig-follow" href="https://www.instagram.com/inkeeratseyes/" target="_blank" rel="noopener">@inkeeratseyes ↗</a>
+    </div>
+    <ul class="wrap gallery-grid" id="galleryGrid" role="list"></ul>
+    <div class="wrap gallery-more"><button type="button" class="ghost-btn" id="galleryMore" hidden>Show more</button></div>
   </section>
 
   <section class="sunsets" id="sunsets" aria-labelledby="sunsets-h">

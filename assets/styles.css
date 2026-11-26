@@ -357,6 +357,43 @@ main > section:not(.hero) { text-shadow: 0 1px 14px rgba(9, 11, 32, .35); }
 .lb-prev { left: 16px; top: 50%; translate: 0 -50%; } .lb-next { right: 16px; top: 50%; translate: 0 -50%; }
 .lb-close { right: 16px; top: 16px; }
 
+/* ---------- gallery (posts from @inkeeratseyes) ---------- */
+.gallery { padding-block: clamp(80px, 12vh, 140px) 0; }
+.gallery-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 34px; }
+.gallery-head .lede { margin: 18px 0 0; }
+.ig-follow { text-decoration: none; white-space: nowrap; }
+.gallery-grid { list-style: none; padding: 0; margin-block: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 14px; }
+.ig-tile { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; padding: 0; border: 0; background: var(--glass); cursor: zoom-in; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px -34px rgba(0, 0, 0, .75); transition: transform .6s var(--ease), box-shadow .6s var(--ease); }
+.ig-tile img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.92); transition: transform 1.2s var(--ease), filter .6s; }
+.ig-tile:hover, .ig-tile:focus-visible { transform: translateY(-6px); box-shadow: 0 34px 70px -30px var(--glow-c, #000); }
+.ig-tile:hover img, .ig-tile:focus-visible img { transform: scale(1.04); filter: saturate(1.05); }
+.ig-badge { position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: rgba(9, 11, 32, .55); backdrop-filter: blur(6px); color: var(--cream); }
+.ig-badge svg { width: 15px; height: 15px; }
+.gallery-more { display: flex; justify-content: center; margin-top: 26px; }
+.gallery-more [hidden] { display: none; }
+.ig-fig { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: min(92vw, 1000px); }
+.ig-box img { max-height: 74vh; width: auto; height: auto; }
+.ig-fig figcaption { width: min(100%, 640px); text-align: center; color: var(--cream-2); font-size: .95rem; }
+.ig-cap { margin: 0 0 6px; white-space: pre-line; max-height: 5.4em; overflow-y: auto; }
+.ig-meta { margin: 0; color: var(--cream-3); font-size: .85rem; }
+.ig-meta a { color: var(--amber); }
+.ig-dots { display: flex; justify-content: center; gap: 2px; margin-bottom: 8px; }
+.ig-dots:empty { display: none; }
+.ig-dot { width: 24px; height: 24px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+.ig-dot::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--cream-3); transition: background .2s, transform .2s; }
+.ig-dot[aria-current="true"]::before { background: var(--cream); transform: scale(1.25); }
+@media (max-width: 900px) {
+  .gallery-head { align-items: flex-start; flex-direction: column; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .ig-tile { border-radius: 12px; }
+  .ig-box img { max-height: 64vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ig-tile, .ig-tile img { transition: none; }
+  .ig-tile:hover, .ig-tile:focus-visible { transform: none; }
+  .ig-tile:hover img, .ig-tile:focus-visible img { transform: none; }
+}
+
 /* ---------- thoughts ---------- */
 .thoughts { padding-block: clamp(120px, 22vh, 240px); overflow: hidden; }
 .thoughts-inner { text-align: center; display: grid; justify-items: center; }

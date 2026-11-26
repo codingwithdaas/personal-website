@@ -1,0 +1,49 @@
+# Copies the posts from @inkeeratseyes into the Gallery section once a day.
+# Setup (one time): add the IG_TOKEN secret, see README → Gallery.
+name: Sync Instagram gallery
+
+on:
+  schedule:
+    - cron: "17 13 * * *"   # every day around 5–6am Pacific
+  workflow_dispatch:        # "Run workflow" button for an instant sync
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: pip install "pillow==11.3.0"
+
+      - name: Pull posts from Instagram
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_REPO: ${{ github.repository }}
+        run: python scripts/instagram_sync.py
+
+      - name: Commit if anything changed
+        run: |
+          git add assets/data/instagram.json assets/img/ig
+          if git diff --cached --quiet; then
+            echo "Nothing new."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync Instagram gallery"
+          git push
