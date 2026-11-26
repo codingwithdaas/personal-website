@@ -1,5 +1,708 @@
 {
  "username": "inkeeratseyes",
  "profile": "https://www.instagram.com/inkeeratseyes/",
- "posts": []
+ "posts": [
+  {
+   "id": "18146021908608147",
+   "type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/Dfq59hrs2V3/",
+   "timestamp": "2026-11-13T05:43:48+0000",
+   "caption": "“For a time, I rest in the grace of the world, and am free.” — Wendell Berry",
+   "alt": "Photo by Keerat: “For a time, I rest in the grace of the world, and am free.” — Wendell Berry",
+   "glow": "#6f80f7",
+   "images": [
+    {
+     "src": "assets/img/ig/18146021908608147.webp",
+     "w": 900,
+     "h": 1600,
+     "sm": "assets/img/ig/18146021908608147-sm.webp",
+     "sw": 600,
+     "sh": 1067,
+     "glow": "#6f80f7",
+     "video": true
+    }
+   ]
+  },
+  {
+   "id": "17933695320141764",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/DeLjodGFD8y/",
+   "timestamp": "2026-10-07T04:59:31+0000",
+   "caption": "“Not all those who wander are lost.” \n\n- J.R.R. Tolkien\n\nthe birds were too fast :(",
+   "alt": "Photo by Keerat: “Not all those who wander are lost.” - J.R.R",
+   "glow": "#6f80f7",
+   "images": [
+    {
+     "src": "assets/img/ig/18035269691662438.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18035269691662438-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#6f80f7",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18140443777614805.webp",
+     "w": 1600,
+     "h": 1200,
+     "sm": "assets/img/ig/18140443777614805-sm.webp",
+     "sw": 800,
+     "sh": 600,
+     "glow": "#6f8bf7",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18163603381492002.webp",
+     "w": 1600,
+     "h": 1200,
+     "sm": "assets/img/ig/18163603381492002-sm.webp",
+     "sw": 800,
+     "sh": 600,
+     "glow": "#f7ac6f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/17904907998592810.webp",
+     "w": 1600,
+     "h": 1200,
+     "sm": "assets/img/ig/17904907998592810-sm.webp",
+     "sw": 800,
+     "sh": 600,
+     "glow": "#f7ac6f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18122138977810999.webp",
+     "w": 1600,
+     "h": 1200,
+     "sm": "assets/img/ig/18122138977810999-sm.webp",
+     "sw": 800,
+     "sh": 600,
+     "glow": "#f7b66f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/17945936589345838.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/17945936589345838-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7b26f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18076414181449728.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18076414181449728-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7a56f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18180700924437149.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18180700924437149-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f79c6f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18187518931366175.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18187518931366175-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7c02c",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18420603889153501.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18420603889153501-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7a05d",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/17924646177203668.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/17924646177203668-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7b26f",
+     "video": false
+    }
+   ]
+  },
+  {
+   "id": "18234349342323608",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/DeGMKrdFGbR/",
+   "timestamp": "2026-10-05T02:58:17+0000",
+   "caption": "\"No matter how you hurry, you will notice at the end of the day that you traveled at the speed of time.\"\n\n- Robert Breault\n\nfirst post with new camera!",
+   "alt": "Photo by Keerat: \"No matter how you hurry, you will notice at the end of the day that you traveled at the speed of time.\" - Robert Breaul…",
+   "glow": "#f7926f",
+   "images": [
+    {
+     "src": "assets/img/ig/18127299389494314.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18127299389494314-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7926f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18124001497922259.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18124001497922259-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7976f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18116616784986308.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18116616784986308-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7736f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/17951159670300754.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/17951159670300754-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7b16f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18072656621735190.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18072656621735190-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7b66f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18088166624275668.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18088166624275668-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#a66ff7",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18105943196618058.webp",
+     "w": 1600,
+     "h": 1600,
+     "sm": "assets/img/ig/18105943196618058-sm.webp",
+     "sw": 600,
+     "sh": 600,
+     "glow": "#f7b76f",
+     "video": false
+    }
+   ]
+  },
+  {
+   "id": "17922129063439125",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/DeDQYHaD9hs/",
+   "timestamp": "2026-10-03T23:37:21+0000",
+   "caption": "“Though we travel the world over to find the beautiful, we must carry it with us or we find it not.”\n\n- Ralph Waldo Emerson",
+   "alt": "Photo by Keerat: “Though we travel the world over to find the beautiful, we must carry it with us or we find it not.” - Ralph Waldo Emers…",
+   "glow": "#f7ae6f",
+   "images": [
+    {
+     "src": "assets/img/ig/18147127501559528.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18147127501559528-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7ae6f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18152755516522400.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18152755516522400-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f78f6f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18131025407508542.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18131025407508542-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#3091f7",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18144508420531242.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18144508420531242-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#6fbcf7",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18103022420574819.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18103022420574819-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7b66f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18119650304075573.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18119650304075573-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f76f88",
+     "video": false
+    }
+   ]
+  },
+  {
+   "id": "18112574587843787",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/DeBbEN7m_o-/",
+   "timestamp": "2026-10-03T06:32:16+0000",
+   "caption": "“There is a pleasure in the pathless woods,\nThere is a rapture on the lonely shore,\nThere is society, where none intrudes,\nBy the deep sea, and music in its roar:\nI love not man the less, but Nature more.”\n\n- Lord Byron",
+   "alt": "Photo by Keerat: “There is a pleasure in the pathless woods, There is a rapture on the lonely shore, There is society, where none intrude…",
+   "glow": "#e6f76f",
+   "images": [
+    {
+     "src": "assets/img/ig/18008638379776731.webp",
+     "w": 1512,
+     "h": 1134,
+     "sm": "assets/img/ig/18008638379776731-sm.webp",
+     "sw": 800,
+     "sh": 600,
+     "glow": "#e6f76f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/17908259616552860.webp",
+     "w": 720,
+     "h": 541,
+     "sm": "assets/img/ig/17908259616552860-sm.webp",
+     "sw": 720,
+     "sh": 541,
+     "glow": "#f7a86c",
+     "video": true
+    },
+    {
+     "src": "assets/img/ig/18371849467246878.webp",
+     "w": 720,
+     "h": 540,
+     "sm": "assets/img/ig/18371849467246878-sm.webp",
+     "sw": 720,
+     "sh": 540,
+     "glow": "#f7e56f",
+     "video": true
+    },
+    {
+     "src": "assets/img/ig/18136344367653307.webp",
+     "w": 1512,
+     "h": 1137,
+     "sm": "assets/img/ig/18136344367653307-sm.webp",
+     "sw": 798,
+     "sh": 600,
+     "glow": "#6ff7da",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18103268309458713.webp",
+     "w": 720,
+     "h": 541,
+     "sm": "assets/img/ig/18103268309458713-sm.webp",
+     "sw": 720,
+     "sh": 541,
+     "glow": "#f7cb6f",
+     "video": true
+    }
+   ]
+  },
+  {
+   "id": "18114435197040213",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/Dd-f43DlPV-/",
+   "timestamp": "2026-10-02T03:16:41+0000",
+   "caption": "“Life is as dear to a mute creature as it is to man. Just as one wants happiness and fears pain, just as one wants to live and not die, so do other creatures.”\n\n- 14th Dalai Lama",
+   "alt": "Photo by Keerat: “Life is as dear to a mute creature as it is to man",
+   "glow": "#f7e26f",
+   "images": [
+    {
+     "src": "assets/img/ig/18071801789749618.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18071801789749618-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7e26f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18167565874487003.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18167565874487003-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7ed6f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18119614276946105.webp",
+     "w": 720,
+     "h": 960,
+     "sm": "assets/img/ig/18119614276946105-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f79d5b",
+     "video": true
+    },
+    {
+     "src": "assets/img/ig/18107850163929359.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18107850163929359-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#82f76f",
+     "video": false
+    }
+   ]
+  },
+  {
+   "id": "18165284860422373",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/Dd8LyFVFLvK/",
+   "timestamp": "2026-10-01T05:42:31+0000",
+   "caption": "“Breathe in the amazing, hold on through the awful, and relax and exhale during the ordinary. That’s just living... and it’s breathtakingly beautiful.”\n\n- L.R. Knost",
+   "alt": "Photo by Keerat: “Breathe in the amazing, hold on through the awful, and relax and exhale during the ordinary",
+   "glow": "#f79c6f",
+   "images": [
+    {
+     "src": "assets/img/ig/17897302071395048.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/17897302071395048-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f79c6f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/17934888792388457.webp",
+     "w": 720,
+     "h": 960,
+     "sm": "assets/img/ig/17934888792388457-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7f66f",
+     "video": true
+    },
+    {
+     "src": "assets/img/ig/17936540772125591.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/17936540772125591-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7bd6f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18445633558135753.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18445633558135753-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#6ff776",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18370885108243615.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18370885108243615-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f78a34",
+     "video": false
+    }
+   ]
+  },
+  {
+   "id": "18125132230798799",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/Dd2wisflAxI/",
+   "timestamp": "2026-09-29T03:08:17+0000",
+   "caption": "“How did it get so late so soon?” \n\n- Dr. Seuss",
+   "alt": "Photo by Keerat: “How did it get so late so soon?” - Dr",
+   "glow": "#baf76f",
+   "images": [
+    {
+     "src": "assets/img/ig/18143357398595813.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18143357398595813-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#baf76f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18096707579385968.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18096707579385968-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7985c",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18105518780226304.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18105518780226304-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#6ff7d9",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/17989556900861238.webp",
+     "w": 720,
+     "h": 960,
+     "sm": "assets/img/ig/17989556900861238-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#ecf76f",
+     "video": true
+    },
+    {
+     "src": "assets/img/ig/17887666551621624.webp",
+     "w": 720,
+     "h": 960,
+     "sm": "assets/img/ig/17887666551621624-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7dd6f",
+     "video": true
+    },
+    {
+     "src": "assets/img/ig/17896586358671970.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/17896586358671970-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f76831",
+     "video": false
+    }
+   ]
+  },
+  {
+   "id": "18010532699967275",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/Dd0n_A5G50O/",
+   "timestamp": "2026-09-28T07:15:01+0000",
+   "caption": "“I would love to believe that when I die I will live again, that some thinking, feeling, remembering part of me will continue…the world is so exquisite with so much love and moral depth, that there is no reason to deceive ourselves with pretty stories for which there’s little good evidence. Far better it seems to me, in our vulnerability, is to look death in the eye and to be grateful every day for the brief but magnificent opportunity that life provides.”\n \n- Carl Sagan",
+   "alt": "Photo by Keerat: “I would love to believe that when I die I will live again, that some thinking, feeling, remembering part of me will con…",
+   "glow": "#f78e5a",
+   "images": [
+    {
+     "src": "assets/img/ig/18142752727583253.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18142752727583253-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f78e5a",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18125227511306091.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18125227511306091-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7926f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/17988923075859218.webp",
+     "w": 720,
+     "h": 960,
+     "sm": "assets/img/ig/17988923075859218-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7906f",
+     "video": true
+    },
+    {
+     "src": "assets/img/ig/17947669098312573.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/17947669098312573-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7826f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18157822810505998.webp",
+     "w": 720,
+     "h": 960,
+     "sm": "assets/img/ig/18157822810505998-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f7b86f",
+     "video": true
+    }
+   ]
+  },
+  {
+   "id": "18141362362613196",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/Ddx_w3Mm4PN/",
+   "timestamp": "2026-09-27T06:45:05+0000",
+   "caption": "“This world, after all our science and sciences, is still a miracle; wonderful, inscrutable, magical, and more to whosoever will think of it.”\n\n- Thomas Carlyle",
+   "alt": "Photo by Keerat: “This world, after all our science and sciences, is still a miracle; wonderful, inscrutable, magical, and more to whosoe…",
+   "glow": "#6f97f7",
+   "images": [
+    {
+     "src": "assets/img/ig/17918174841243157.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/17918174841243157-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#6f97f7",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18111891245583231.webp",
+     "w": 1204,
+     "h": 1600,
+     "sm": "assets/img/ig/18111891245583231-sm.webp",
+     "sw": 600,
+     "sh": 797,
+     "glow": "#f7aa6f",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18130050397826062.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18130050397826062-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#6fa6f7",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18100167749381290.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18100167749381290-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#6f88f7",
+     "video": false
+    }
+   ]
+  },
+  {
+   "id": "18041265191831960",
+   "type": "CAROUSEL_ALBUM",
+   "permalink": "https://www.instagram.com/p/Ddu6Y2elGSZ/",
+   "timestamp": "2026-09-26T02:00:24+0000",
+   "caption": "“Surrender becomes easier when you realize the fleeting nature of all experiences.”\n\n- Eckhart Tolle",
+   "alt": "Photo by Keerat: “Surrender becomes easier when you realize the fleeting nature of all experiences.” - Eckhart Tolle",
+   "glow": "#5ea1f7",
+   "images": [
+    {
+     "src": "assets/img/ig/18439265233176006.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18439265233176006-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#5ea1f7",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18105872762248236.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18105872762248236-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f78b65",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/17886718074685082.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/17886718074685082-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f77456",
+     "video": false
+    },
+    {
+     "src": "assets/img/ig/18119181094943675.webp",
+     "w": 1200,
+     "h": 1600,
+     "sm": "assets/img/ig/18119181094943675-sm.webp",
+     "sw": 600,
+     "sh": 800,
+     "glow": "#f79066",
+     "video": false
+    }
+   ]
+  }
+ ],
+ "updated": "2026-11-26T04:12:11Z"
 }
